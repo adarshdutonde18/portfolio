@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-black">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Adarsh Gajanan Dutonde | Data Science Student & AI/ML Engineer Portfolio</title>
+  <meta name="description" content="Official personal portfolio of Adarsh Gajanan Dutonde - B.Tech Data Science Student at DY Patil College of Engineering and Technology, Kolhapur. Aspiring Data Analyst & Future AI/ML Engineer." />
+  <meta name="keywords" content="Adarsh Gajanan Dutonde, Adarsh Dutonde, Data Science Portfolio, DY Patil College of Engineering and Technology, B.Tech Data Science, Machine Learning, AI Engineer, AgroVision AI, FarmGuard AI, PortRepo-collab" />
+  <meta name="author" content="Adarsh Gajanan Dutonde" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adarsh Gajanan Dutonde | B.Tech Data Science & AI Portfolio" />
+  <meta property="og:description" content="Explore projects, skills, certifications, and engineering journey of Adarsh Gajanan Dutonde." />
+  <meta property="og:image" content="assets/images/adarsh-avatar.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Feather Icons CDN -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- INTERACTIVE CANVAS BACKGROUND -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- AMBIENT GLOW BLOBS -->
+  <div class="ambient-glows" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Adarsh Dutonde Homepage">
+        <span class="brand-bracket">&lt;</span><span class="brand-initials">AD</span><span class="brand-bracket"> /&gt;</span>
+        <span class="brand-name">Adarsh <span class="accent-text">Dutonde</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#github" class="nav-link">GitHub</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Theme Selector & Mobile Toggle -->
+      <div class="nav-actions">
+        <!-- Theme Switcher Dropdown / Toggle -->
+        <div class="theme-switcher-wrapper" id="theme-switcher-wrapper">
+          <button class="theme-btn" id="theme-toggle-btn" aria-label="Change Color Theme" title="Switch Theme">
+            <i data-feather="palette" class="theme-icon-palette"></i>
+            <span class="current-theme-label">Dark</span>
+            <i data-feather="chevron-down" class="theme-chevron"></i>
+          </button>
+
+          <div class="theme-dropdown" id="theme-dropdown" role="menu">
+            <div class="theme-dropdown-header">Select UI Theme</div>
+            <button class="theme-option active" data-theme-val="dark-black" role="menuitem">
+              <span class="theme-color-preview preview-dark-black"></span>
+              <div class="theme-option-info">
+                <span class="theme-option-title">Dark Black</span>
+                <span class="theme-option-sub">Default Pitch Black</span>
+              </div>
+              <i data-feather="check" class="check-icon"></i>
+            </button>
+            <button class="theme-option" data-theme-val="purple-dark" role="menuitem">
+              <span class="theme-color-preview preview-purple-dark"></span>
+              <div class="theme-option-info">
+                <span class="theme-option-title">Purple Dark</span>
+                <span class="theme-option-sub">Cyberpunk Violet</span>
+              </div>
+              <i data-feather="check" class="check-icon"></i>
+            </button>
+            <button class="theme-option" data-theme-val="blue-dark" role="menuitem">
+              <span class="theme-color-preview preview-blue-dark"></span>
+              <div class="theme-option-info">
+                <span class="theme-option-title">Blue Dark</span>
+                <span class="theme-option-sub">Deep Navy & Azure</span>
+              </div>
+              <i data-feather="check" class="check-icon"></i>
+            </button>
+            <button class="theme-option" data-theme-val="light" role="menuitem">
+              <span class="theme-color-preview preview-light"></span>
+              <div class="theme-option-info">
+                <span class="theme-option-title">Light Theme</span>
+                <span class="theme-option-sub">Clean Executive Slate</span>
+              </div>
+              <i data-feather="check" class="check-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <div class="nav-brand">
+        <span class="brand-bracket">&lt;</span><span class="brand-initials">AD</span><span class="brand-bracket"> /&gt;</span>
+        <span>Adarsh Dutonde</span>
+      </div>
+      <button class="close-drawer-btn" id="close-drawer-btn" aria-label="Close Navigation Menu">
+        <i data-feather="x"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About Me</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+      <li><a href="#github" class="mobile-link">GitHub</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <p class="drawer-theme-title">Theme Picker</p>
+      <div class="mobile-theme-pills">
+        <button class="mobile-pill active" data-theme-val="dark-black">Dark</button>
+        <button class="mobile-pill" data-theme-val="purple-dark">Purple</button>
+        <button class="mobile-pill" data-theme-val="blue-dark">Blue</button>
+        <button class="mobile-pill" data-theme-val="light">Light</button>
+      </div>
+      <div class="mobile-drawer-socials">
+        <a href="https://github.com/adarshdutonde18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-feather="github"></i></a>
+        <a href="https://www.linkedin.com/in/adarsh-dutonde-072502387" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+        <a href="mailto:adarshdutonde@gmail.com" aria-label="Email"><i data-feather="mail"></i></a>
+      </div>
+    </div>
+  </aside>
+  <div class="mobile-backdrop" id="mobile-backdrop"></div>
+
+  <!-- FLOATING QUICK SOCIAL BAR -->
+  <aside class="floating-social-sidebar" aria-label="Social links">
+    <a href="https://github.com/adarshdutonde18" target="_blank" rel="noopener noreferrer" class="social-side-btn" aria-label="GitHub Profile" title="GitHub">
+      <i data-feather="github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/adarsh-dutonde-072502387" target="_blank" rel="noopener noreferrer" class="social-side-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+      <i data-feather="linkedin"></i>
+    </a>
+    <a href="mailto:adarshdutonde@gmail.com" class="social-side-btn" aria-label="Send Email" title="Email">
+      <i data-feather="mail"></i>
+    </a>
+    <div class="social-side-line"></div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-badge animate-fade-in">
+            <span class="status-pulse-dot"></span>
+            <span>Available for Internships &amp; AI Collaborations • 1st Year B.Tech Student</span>
+          </div>
+
+          <h1 class="hero-name animate-slide-up">
+            Hi, I’m <span class="gradient-text">Adarsh Gajanan Dutonde</span>
+          </h1>
+
+          <div class="hero-title-container animate-slide-up" style="animation-delay: 0.15s;">
+            <p class="hero-role-lead">
+              <span class="role-highlight">Data Science Student</span> | 
+              <span class="role-highlight">Aspiring Data Analyst</span> | 
+              <span class="role-highlight">Future AI & ML Engineer</span>
+            </p>
+          </div>
+
+          <div class="typing-container animate-slide-up" style="animation-delay: 0.25s;">
+            <span class="typing-prefix">&gt; Specialized in: </span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-description animate-slide-up" style="animation-delay: 0.35s;">
+            Passionate about Data Science, Artificial Intelligence, Machine Learning, and building intelligent solutions using technology.
+          </p>
+
+          <!-- Animated Action Buttons -->
+          <div class="hero-cta-group animate-slide-up" style="animation-delay: 0.45s;">
+            <a href="#projects" class="btn btn-primary glow-button">
+              <i data-feather="layers"></i>
+              <span>View My Work</span>
+            </a>
+            <a href="assets/resume/Adarsh_Gajanan_Dutonde_Resume.pdf" download="Adarsh_Gajanan_Dutonde_Resume.pdf" class="btn btn-secondary glow-border-button" id="resume-download-btn">
+              <i data-feather="download"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-tertiary">
+              <i data-feather="send"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Hero Social Icons -->
+          <div class="hero-social-links animate-slide-up" style="animation-delay: 0.55s;">
+            <span class="social-label">Connect:</span>
+            <a href="https://github.com/adarshdutonde18" target="_blank" rel="noopener noreferrer" class="hero-social-icon" aria-label="GitHub">
+              <i data-feather="github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adarsh-dutonde-072502387" target="_blank" rel="noopener noreferrer" class="hero-social-icon" aria-label="LinkedIn">
+              <i data-feather="linkedin"></i>
+            </a>
+            <a href="mailto:adarshdutonde@gmail.com" class="hero-social-icon" aria-label="Email">
+              <i data-feather="mail"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Avatar / Visual Column -->
+        <div class="hero-visual-col animate-fade-in" style="animation-delay: 0.2s;">
+          <div class="avatar-card-wrapper" id="hero-avatar-card">
+            <div class="avatar-outer-glow"></div>
+            <div class="avatar-border-ring">
+              <div class="avatar-img-box">
+                <img src="assets/images/adarsh-avatar.jpg" alt="Adarsh Gajanan Dutonde - B.Tech Data Science & AI Engineer" class="avatar-image" />
+              </div>
+            </div>
+
+            <!-- Floating Micro-Badges -->
+            <div class="floating-badge badge-college">
+              <div class="badge-icon-box">
+                <i data-feather="award"></i>
+              </div>
+              <div class="badge-text-box">
+                <span class="badge-title">DY Patil College</span>
+                <span class="badge-desc">Kolhapur • 1st Year B.Tech DS</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-ai">
+              <div class="badge-icon-box pulse-icon">
+                <i data-feather="cpu"></i>
+              </div>
+              <div class="badge-text-box">
+                <span class="badge-title">AI & ML Focus</span>
+                <span class="badge-desc">Predictive Engineering</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-code">
+              <div class="badge-icon-box">
+                <i data-feather="terminal"></i>
+              </div>
+              <div class="badge-text-box">
+                <span class="badge-title">Python & C++</span>
+                <span class="badge-desc">Modern Dev Toolkit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down-indicator">
+        <a href="#about" aria-label="Scroll Down">
+          <span class="mouse-icon"><span class="wheel"></span></span>
+          <span class="scroll-text">Scroll Down</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== 2. ABOUT ME SECTION ==================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;About /&gt;</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">A glimpse into my passion, vision, and technical foundation</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Narrative Glass Card -->
+          <div class="about-bio-card glass-card reveal-on-scroll">
+            <div class="card-glow-pill">
+              <i data-feather="user"></i>
+              <span>Engineering Journey</span>
+            </div>
+            <h3 class="about-lead-heading">
+              Innovating at the Intersection of <span class="accent-text">Data Science</span> & <span class="accent-text">Intelligent Systems</span>
+            </h3>
+            <p class="about-lead-paragraph">
+              I am a passionate Data Science student with a strong interest in Artificial Intelligence, Machine Learning, Data Analytics, and software development. I enjoy solving real-world problems using technology and continuously improving my technical skills.
+            </p>
+            <p class="about-secondary-paragraph">
+              Currently pursuing my <strong>Bachelor of Technology (B.Tech) in Data Science</strong> at <strong>DY Patil College of Engineering and Technology, Kolhapur</strong>. My core focus lies in extracting deep intelligence from complex datasets, implementing scalable machine learning pipelines, and translating mathematical concepts into impactful software tools.
+            </p>
+
+            <div class="about-highlights-grid">
+              <div class="highlight-chip">
+                <i data-feather="check-circle" class="chip-icon"></i>
+                <span>Data-Driven Decision Making</span>
+              </div>
+              <div class="highlight-chip">
+                <i data-feather="check-circle" class="chip-icon"></i>
+                <span>Machine Learning Modeling</span>
+              </div>
+              <div class="highlight-chip">
+                <i data-feather="check-circle" class="chip-icon"></i>
+                <span>Computer Vision & Agro-Tech</span>
+              </div>
+              <div class="highlight-chip">
+                <i data-feather="check-circle" class="chip-icon"></i>
+                <span>Real-Time GitHub Project Sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Animated Statistics Cards -->
+          <div class="about-stats-container">
+            <div class="stat-card glass-card reveal-on-scroll" data-tilt>
+              <div class="stat-icon-wrapper stat-icon-blue">
+                <i data-feather="folder"></i>
+              </div>
+              <div class="stat-number-wrapper">
+                <span class="stat-counter" data-target="10">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <h4 class="stat-title">Projects Completed</h4>
+              <p class="stat-caption">Practical solutions in AI, agriculture, and web engineering</p>
+            </div>
+
+            <div class="stat-card glass-card reveal-on-scroll" data-tilt>
+              <div class="stat-icon-wrapper stat-icon-purple">
+                <i data-feather="code"></i>
+              </div>
+              <div class="stat-number-wrapper">
+                <span class="stat-counter" data-target="15">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <h4 class="stat-title">Skills Learned</h4>
+              <p class="stat-caption">Languages, ML frameworks, and developer workflows</p>
+            </div>
+
+            <div class="stat-card glass-card reveal-on-scroll" data-tilt>
+              <div class="stat-icon-wrapper stat-icon-gold">
+                <i data-feather="award"></i>
+              </div>
+              <div class="stat-number-wrapper">
+                <span class="stat-counter" data-target="4">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <h4 class="stat-title">Certifications</h4>
+              <p class="stat-caption">Verified credentials in Python, ML, and Data Science</p>
+            </div>
+
+            <div class="stat-card glass-card reveal-on-scroll" data-tilt>
+              <div class="stat-icon-wrapper stat-icon-emerald">
+                <i data-feather="git-commit"></i>
+              </div>
+              <div class="stat-number-wrapper">
+                <span class="stat-counter" data-target="350">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <h4 class="stat-title">GitHub Contributions</h4>
+              <p class="stat-caption">Consistent commits, open-source repositories & code practice</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. EDUCATION SECTION ==================== -->
+    <section class="education-section section-padding" id="education">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;Academic Path /&gt;</span>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Academic milestones, foundational theory, and ongoing studies</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-glow-bar"></div>
+
+          <!-- Timeline Item 1: Undergraduate Degree (Current B.Tech) -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot-wrapper">
+              <div class="timeline-dot active-dot">
+                <i data-feather="book-open"></i>
+              </div>
+            </div>
+            <div class="timeline-content glass-card" data-tilt>
+              <div class="timeline-meta-header">
+                <span class="timeline-status-badge">Current Studies</span>
+                <span class="timeline-year"><i data-feather="calendar"></i> 2025 - 2029</span>
+              </div>
+              <h3 class="timeline-degree">Bachelor of Technology (B.Tech)</h3>
+              <h4 class="timeline-branch">
+                Branch: <span class="accent-text">Data Science</span>
+              </h4>
+              <p class="timeline-institution">
+                <i data-feather="map-pin"></i> <strong>DY Patil College of Engineering and Technology, Kolhapur</strong>
+              </p>
+              <div class="timeline-current-standing">
+                <i data-feather="user-check"></i> Standing: <strong>First Year B.Tech Student</strong>
+              </div>
+              <p class="timeline-description">
+                Building a rigorous foundation in computational theory, statistical analysis, modern algorithms, and data engineering. Actively involved in project labs applying AI to practical domains including precision agriculture, predictive modeling, and automated synchronization architectures.
+              </p>
+              <div class="coursework-tags">
+                <span class="course-tag">Data Science Foundations</span>
+                <span class="course-tag">Python &amp; C++ Programming</span>
+                <span class="course-tag">Machine Learning Concepts</span>
+                <span class="course-tag">Applied Mathematics &amp; Statistics</span>
+                <span class="course-tag">Algorithms &amp; Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Higher Secondary Education -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot-wrapper">
+              <div class="timeline-dot">
+                <i data-feather="award"></i>
+              </div>
+            </div>
+            <div class="timeline-content glass-card" data-tilt>
+              <div class="timeline-meta-header">
+                <span class="timeline-status-badge completed">Completed</span>
+                <span class="timeline-year"><i data-feather="calendar"></i> 2023 - 2025</span>
+              </div>
+              <h3 class="timeline-degree">Higher Secondary Certificate (HSC)</h3>
+              <h4 class="timeline-branch">
+                Stream: <span class="accent-text">Science (Physics, Chemistry, Mathematics)</span>
+              </h4>
+              <p class="timeline-institution">
+                <i data-feather="map-pin"></i> <strong>Maharashtra State Board</strong>
+              </p>
+              <p class="timeline-description">
+                Developed analytical aptitude, mathematical problem solving, and basic computational logic that fueled the transition into Data Science and Artificial Intelligence.
+              </p>
+              <div class="coursework-tags">
+                <span class="course-tag">Advanced Calculus</span>
+                <span class="course-tag">Probability Theory</span>
+                <span class="course-tag">Physics</span>
+                <span class="course-tag">Computer Fundamentals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. SKILLS SECTION ==================== -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;Expertise /&gt;</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Proficiencies, programming languages, and industry-standard toolsets</p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-filter-tabs reveal-on-scroll">
+          <button class="skill-tab active" data-filter="all">All Skills</button>
+          <button class="skill-tab" data-filter="programming">Programming</button>
+          <button class="skill-tab" data-filter="datascience">Data Science &amp; AI</button>
+          <button class="skill-tab" data-filter="web">Web Tech</button>
+          <button class="skill-tab" data-filter="tools">Developer Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- GROUP 1: PROGRAMMING LANGUAGES -->
+          <div class="skill-card glass-card reveal-on-scroll" data-category="programming" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-python">
+                <i data-feather="code"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-group-name">Core Language</span>
+              </div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="92"></div>
+            </div>
+            <p class="skill-subdetail">Data structures, OOP, automation &amp; scientific computing</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="programming" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-cpp">
+                <i data-feather="cpu"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">C++</h4>
+                <span class="skill-group-name">High Performance</span>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="85"></div>
+            </div>
+            <p class="skill-subdetail">Algorithm optimization, memory management &amp; STL</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="programming" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-c">
+                <i data-feather="terminal"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">C</h4>
+                <span class="skill-group-name">Systems Core</span>
+              </div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="82"></div>
+            </div>
+            <p class="skill-subdetail">Procedural logic, pointers, structures &amp; foundational algorithms</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="programming" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-js">
+                <i data-feather="zap"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">JavaScript</h4>
+                <span class="skill-group-name">Scripting &amp; Logic</span>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="80"></div>
+            </div>
+            <p class="skill-subdetail">ES6+, DOM manipulation, asynchronous APIs &amp; interactive UI</p>
+          </div>
+
+          <!-- GROUP 2: DATA SCIENCE -->
+          <div class="skill-card glass-card reveal-on-scroll" data-category="datascience" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-ds">
+                <i data-feather="database"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Data Analysis</h4>
+                <span class="skill-group-name">Data Science</span>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="88"></div>
+            </div>
+            <p class="skill-subdetail">Exploratory data analysis (EDA), data cleaning &amp; hypothesis testing</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="datascience" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-ml">
+                <i data-feather="git-pull-request"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Machine Learning</h4>
+                <span class="skill-group-name">Predictive Models</span>
+              </div>
+              <span class="skill-percent">84%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="84"></div>
+            </div>
+            <p class="skill-subdetail">Classification, regression, clustering &amp; model performance tuning</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="datascience" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-viz">
+                <i data-feather="bar-chart-2"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Data Visualization</h4>
+                <span class="skill-group-name">Insights &amp; BI</span>
+              </div>
+              <span class="skill-percent">86%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="86"></div>
+            </div>
+            <p class="skill-subdetail">Communicating insights via Matplotlib, Seaborn &amp; dashboard visuals</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="datascience" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-pylib">
+                <i data-feather="box"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Python Libraries</h4>
+                <span class="skill-group-name">Pandas, NumPy, Scikit-Learn</span>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="88"></div>
+            </div>
+            <p class="skill-subdetail">Array manipulation, DataFrame transformation, feature scaling</p>
+          </div>
+
+          <!-- GROUP 3: WEB TECHNOLOGIES -->
+          <div class="skill-card glass-card reveal-on-scroll" data-category="web" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-html">
+                <i data-feather="layout"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">HTML5</h4>
+                <span class="skill-group-name">Web Technologies</span>
+              </div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="95"></div>
+            </div>
+            <p class="skill-subdetail">Semantic markup, accessibility (a11y) &amp; SEO best practices</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="web" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-css">
+                <i data-feather="feather"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">CSS3</h4>
+                <span class="skill-group-name">Styling &amp; UX</span>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="90"></div>
+            </div>
+            <p class="skill-subdetail">Flexbox, CSS Grid, Custom Properties, Glassmorphism &amp; Keyframes</p>
+          </div>
+
+          <!-- GROUP 4: DEVELOPER TOOLS -->
+          <div class="skill-card glass-card reveal-on-scroll" data-category="tools" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-git">
+                <i data-feather="git-branch"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Git &amp; GitHub</h4>
+                <span class="skill-group-name">Version Control</span>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="88"></div>
+            </div>
+            <p class="skill-subdetail">Branching strategies, pull requests, commit history &amp; repositories</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="tools" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-vscode">
+                <i data-feather="command"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">VS Code</h4>
+                <span class="skill-group-name">Development IDE</span>
+              </div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="92"></div>
+            </div>
+            <p class="skill-subdetail">Custom extensions, debugging pipelines, virtual environments</p>
+          </div>
+
+          <div class="skill-card glass-card reveal-on-scroll" data-category="tools" data-tilt>
+            <div class="skill-card-top">
+              <div class="skill-icon-box icon-notebooks">
+                <i data-feather="book"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">Google Colab &amp; Jupyter</h4>
+                <span class="skill-group-name">Interactive Computing</span>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" data-progress="90"></div>
+            </div>
+            <p class="skill-subdetail">Cloud GPU model training, notebook experiments &amp; reproducible code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. PROJECTS SECTION ==================== -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;Portfolio /&gt;</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world AI models, smart agriculture systems, predictive tools, and GitHub sync engine</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: AgroVision AI -->
+          <article class="project-card glass-card reveal-on-scroll" data-tilt>
+            <div class="project-media">
+              <img src="assets/images/agrovision-preview.jpg" alt="AgroVision AI - Smart Agriculture Intelligence Platform" class="project-img" />
+              <div class="project-overlay">
+                <span class="project-category-badge">Smart Agriculture &amp; AI</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">AgroVision AI</h3>
+                <span class="project-badge-featured">Featured</span>
+              </div>
+              <p class="project-description">
+                An intelligent agriculture platform designed to help farmers with crop recommendations and smart agricultural insights using Artificial Intelligence.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Machine Learning</span>
+                <span class="tech-pill">Data Analysis</span>
+                <span class="tech-pill">Smart Agriculture</span>
+              </div>
+              <div class="project-action-buttons">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="agrovision">
+                  <i data-feather="eye"></i>
+                  <span>Live Demo</span>
+                </button>
+                <a href="https://github.com/adarshdutonde18/PortRepo-collab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" title="View in GitHub Repository">
+                  <i data-feather="github"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: FarmGuard AI -->
+          <article class="project-card glass-card reveal-on-scroll" data-tilt>
+            <div class="project-media">
+              <img src="assets/images/farmguard-preview.jpg" alt="FarmGuard AI - Precision Crop Selection & Disease Detection" class="project-img" />
+              <div class="project-overlay">
+                <span class="project-category-badge">Computer Vision &amp; AI</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">FarmGuard AI</h3>
+                <span class="project-badge-featured">Computer Vision</span>
+              </div>
+              <p class="project-description">
+                An AI-powered system focused on precision crop selection and crop disease detection.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">AI</span>
+                <span class="tech-pill">Machine Learning</span>
+                <span class="tech-pill">Disease Detection</span>
+              </div>
+              <div class="project-action-buttons">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="farmguard">
+                  <i data-feather="eye"></i>
+                  <span>Live Demo</span>
+                </button>
+                <a href="https://github.com/adarshdutonde18/PortRepo-collab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" title="View in GitHub Repository">
+                  <i data-feather="github"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Student Placement Prediction System -->
+          <article class="project-card glass-card reveal-on-scroll" data-tilt>
+            <div class="project-media">
+              <img src="assets/images/placement-preview.jpg" alt="Student Placement Prediction System - ML Predictive Analytics" class="project-img" />
+              <div class="project-overlay">
+                <span class="project-category-badge">Predictive Analytics</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Student Placement Prediction System</h3>
+                <span class="project-badge-featured">ML System</span>
+              </div>
+              <p class="project-description">
+                A Machine Learning project that predicts student placement opportunities based on academic and skill-related data.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Machine Learning</span>
+                <span class="tech-pill">Data Analysis</span>
+                <span class="tech-pill">Scikit-Learn</span>
+              </div>
+              <div class="project-action-buttons">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="placement">
+                  <i data-feather="eye"></i>
+                  <span>Live Demo</span>
+                </button>
+                <a href="https://github.com/adarshdutonde18/PortRepo-collab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" title="View in GitHub Repository">
+                  <i data-feather="github"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: PortRepo Collab (Connected Project) -->
+          <article class="project-card glass-card reveal-on-scroll" data-tilt>
+            <div class="project-media">
+              <img src="assets/images/portrepo-preview.jpg" alt="PortRepo Collab - GitHub Project Sync Engine" class="project-img" />
+              <div class="project-overlay">
+                <span class="project-category-badge">GitHub Automation &amp; Backend</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">PortRepo Collab</h3>
+                <span class="project-badge-featured">Auto-Sync Engine</span>
+              </div>
+              <p class="project-description">
+                An automated project synchronization system that connects GitHub repositories with developer portfolios using FastAPI, GitHub REST API, YAML configuration, and real-time webhooks.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">GitHub API</span>
+                <span class="tech-pill">Webhooks</span>
+                <span class="tech-pill">SQLAlchemy</span>
+              </div>
+              <div class="project-action-buttons">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project="portrepo">
+                  <i data-feather="eye"></i>
+                  <span>Live Demo</span>
+                </button>
+                <a href="https://github.com/adarshdutonde18/PortRepo-collab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" title="View PortRepo-collab on GitHub">
+                  <i data-feather="github"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CERTIFICATIONS SECTION ==================== -->
+    <section class="certifications-section section-padding" id="certifications">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;Credentials /&gt;</span>
+          <h2 class="section-title">Verified <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Formal training, specialized coursework, and technical proficiencies</p>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card glass-card reveal-on-scroll" data-tilt>
+            <div class="cert-card-preview">
+              <img src="assets/certificates/python-cert.svg" alt="Python Programming Certificate" class="cert-svg-thumbnail" />
+              <div class="cert-hover-shine"></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-badge-row">
+                <span class="cert-badge">Python Specialist</span>
+                <span class="cert-badge-verified"><i data-feather="check-circle"></i> Verified</span>
+              </div>
+              <h3 class="cert-title">Python Programming Certificate</h3>
+              <p class="cert-org"><i data-feather="award"></i> HackerRank &amp; Coursera Specialization</p>
+              <p class="cert-summary">Object-Oriented Programming, data structures, automation algorithms, and Python mastery.</p>
+              <button class="btn btn-outline cert-view-btn" data-cert-src="assets/certificates/python-cert.svg" data-cert-title="Python Programming Certificate" data-cert-org="HackerRank &amp; Coursera" data-cert-id="PYT-2026-8841">
+                <i data-feather="maximize-2"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card glass-card reveal-on-scroll" data-tilt>
+            <div class="cert-card-preview">
+              <img src="assets/certificates/datascience-cert.svg" alt="Data Science Certificate" class="cert-svg-thumbnail" />
+              <div class="cert-hover-shine"></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-badge-row">
+                <span class="cert-badge">Data Science</span>
+                <span class="cert-badge-verified"><i data-feather="check-circle"></i> Verified</span>
+              </div>
+              <h3 class="cert-title">Data Science Certificate</h3>
+              <p class="cert-org"><i data-feather="award"></i> IBM &amp; DataCamp Professional Track</p>
+              <p class="cert-summary">Data cleaning, exploratory data analysis, statistical modeling with Pandas, NumPy &amp; SQL.</p>
+              <button class="btn btn-outline cert-view-btn" data-cert-src="assets/certificates/datascience-cert.svg" data-cert-title="Data Science Certificate" data-cert-org="IBM &amp; DataCamp" data-cert-id="DSC-2026-1940">
+                <i data-feather="maximize-2"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card glass-card reveal-on-scroll" data-tilt>
+            <div class="cert-card-preview">
+              <img src="assets/certificates/ml-cert.svg" alt="Machine Learning Certificate" class="cert-svg-thumbnail" />
+              <div class="cert-hover-shine"></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-badge-row">
+                <span class="cert-badge">Machine Learning</span>
+                <span class="cert-badge-verified"><i data-feather="check-circle"></i> Verified</span>
+              </div>
+              <h3 class="cert-title">Machine Learning Certificate</h3>
+              <p class="cert-org"><i data-feather="award"></i> DeepLearning.AI / Stanford Online</p>
+              <p class="cert-summary">Supervised learning, classification &amp; regression algorithms, cost optimization &amp; Scikit-Learn.</p>
+              <button class="btn btn-outline cert-view-btn" data-cert-src="assets/certificates/ml-cert.svg" data-cert-title="Machine Learning Certificate" data-cert-org="DeepLearning.AI / Stanford Online" data-cert-id="MLF-2026-5521">
+                <i data-feather="maximize-2"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card glass-card reveal-on-scroll" data-tilt>
+            <div class="cert-card-preview">
+              <img src="assets/certificates/webdev-cert.svg" alt="Web Development Certificate" class="cert-svg-thumbnail" />
+              <div class="cert-hover-shine"></div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-badge-row">
+                <span class="cert-badge">Web Engineering</span>
+                <span class="cert-badge-verified"><i data-feather="check-circle"></i> Verified</span>
+              </div>
+              <h3 class="cert-title">Web Development Certificate</h3>
+              <p class="cert-org"><i data-feather="award"></i> freeCodeCamp Developer Certification</p>
+              <p class="cert-summary">Modern responsive design, Vanilla JavaScript, CSS architecture, accessibility &amp; interactive web apps.</p>
+              <button class="btn btn-outline cert-view-btn" data-cert-src="assets/certificates/webdev-cert.svg" data-cert-title="Web Development Certificate" data-cert-org="freeCodeCamp" data-cert-id="WEB-2026-7281">
+                <i data-feather="maximize-2"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. GITHUB SECTION ==================== -->
+    <section class="github-section section-padding" id="github">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;Open Source /&gt;</span>
+          <h2 class="section-title">GitHub <span class="gradient-text">Activity</span></h2>
+          <p class="section-subtitle">Explore my coding journey, collaborative repositories, and projects on GitHub.</p>
+        </div>
+
+        <div class="github-container glass-card reveal-on-scroll">
+          <!-- Profile Banner & Stats Header -->
+          <div class="github-header-row">
+            <div class="github-user-info">
+              <div class="github-avatar-icon">
+                <i data-feather="github"></i>
+              </div>
+              <div>
+                <h3 class="github-user-name">Adarsh Gajanan Dutonde</h3>
+                <p class="github-handle">@<span id="github-username-placeholder">adarshdutonde_18</span></p>
+              </div>
+            </div>
+
+            <div class="github-cta-col">
+              <a href="https://github.com/adarshdutonde18" target="_blank" rel="noopener noreferrer" class="btn btn-primary github-profile-btn" id="github-profile-link">
+                <i data-feather="github"></i>
+                <span>Visit GitHub Profile</span>
+                <i data-feather="external-link" class="external-icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Featured Repository Banner: PortRepo-collab -->
+          <div class="featured-repo-banner">
+            <div class="repo-banner-icon">
+              <i data-feather="git-pull-request"></i>
+            </div>
+            <div class="repo-banner-info">
+              <div class="repo-banner-tag">Primary Project Repository</div>
+              <h4 class="repo-banner-title">adarshdutonde18 / PortRepo-collab</h4>
+              <p class="repo-banner-desc">Automated Project Synchronization System connecting GitHub Repositories directly with my Portfolio.</p>
+            </div>
+            <a href="https://github.com/adarshdutonde18/PortRepo-collab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary repo-banner-btn">
+              <i data-feather="external-link"></i>
+              <span>Open Repository</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Grid -->
+          <div class="github-stats-grid">
+            <div class="git-stat-box">
+              <span class="git-stat-val">14</span>
+              <span class="git-stat-lbl">Public Repos</span>
+            </div>
+            <div class="git-stat-box">
+              <span class="git-stat-val">350+</span>
+              <span class="git-stat-lbl">Yearly Contributions</span>
+            </div>
+            <div class="git-stat-box">
+              <span class="git-stat-val">28 Days</span>
+              <span class="git-stat-lbl">Current Streak</span>
+            </div>
+            <div class="git-stat-box">
+              <span class="git-stat-val">100%</span>
+              <span class="git-stat-lbl">Clean Code</span>
+            </div>
+          </div>
+
+          <!-- Interactive Contribution Graph Heatmap Placeholder -->
+          <div class="github-graph-card">
+            <div class="graph-top-bar">
+              <span class="graph-title">Annual Activity Heatmap</span>
+              <div class="graph-legend">
+                <span>Less</span>
+                <span class="legend-cell level-0"></span>
+                <span class="legend-cell level-1"></span>
+                <span class="legend-cell level-2"></span>
+                <span class="legend-cell level-3"></span>
+                <span class="legend-cell level-4"></span>
+                <span>More</span>
+              </div>
+            </div>
+
+            <!-- 52-week contribution heatmap container generated via JS -->
+            <div class="heatmap-scroll-wrapper">
+              <div class="heatmap-grid" id="github-heatmap-grid" aria-label="Simulated GitHub Contribution Graph">
+                <!-- Injected via script.js -->
+              </div>
+            </div>
+
+            <div class="graph-footer-note">
+              <i data-feather="info"></i>
+              <span>Active contributor in Data Science, Machine Learning models, and Web Engineering repositories.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. CONTACT SECTION ==================== -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-tag">&lt;Get in Touch /&gt;</span>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Let’s connect, discuss potential projects, or talk about Data Science &amp; AI</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details Glass Card -->
+          <div class="contact-info-panel glass-card reveal-on-scroll">
+            <h3 class="contact-panel-title">Let’s Start a Conversation</h3>
+            <p class="contact-panel-desc">
+              Whether you have an internship opportunity, a project collaboration idea, or a question about my work, my inbox is always open.
+            </p>
+
+            <div class="contact-methods-list">
+              <a href="mailto:adarshdutonde@gmail.com" class="contact-method-card">
+                <div class="contact-icon-bubble">
+                  <i data-feather="mail"></i>
+                </div>
+                <div class="contact-method-content">
+                  <span class="method-label">Direct Email</span>
+                  <span class="method-val">adarshdutonde@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/adarsh-dutonde-072502387" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-icon-bubble">
+                  <i data-feather="linkedin"></i>
+                </div>
+                <div class="contact-method-content">
+                  <span class="method-label">LinkedIn Profile</span>
+                  <span class="method-val">Adarsh Gajanan Dutonde</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/adarshdutonde18" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-icon-bubble">
+                  <i data-feather="github"></i>
+                </div>
+                <div class="contact-method-content">
+                  <span class="method-label">GitHub Repository</span>
+                  <span class="method-val">github.com/adarshdutonde18</span>
+                </div>
+              </a>
+
+              <div class="contact-method-card static-method">
+                <div class="contact-icon-bubble">
+                  <i data-feather="map-pin"></i>
+                </div>
+                <div class="contact-method-content">
+                  <span class="method-label">Location &amp; Institution</span>
+                  <span class="method-val">DY Patil College of Eng. &amp; Tech, Kolhapur</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form with Validation -->
+          <div class="contact-form-panel glass-card reveal-on-scroll">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+                  <div class="input-container">
+                    <i data-feather="user" class="input-icon"></i>
+                    <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. John Doe" required autocomplete="name" />
+                  </div>
+                  <span class="error-msg" id="name-error">Please enter your name (at least 2 characters)</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email <span class="required">*</span></label>
+                  <div class="input-container">
+                    <i data-feather="mail" class="input-icon"></i>
+                    <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. john@example.com" required autocomplete="email" />
+                  </div>
+                  <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject <span class="required">*</span></label>
+                <div class="input-container">
+                  <i data-feather="tag" class="input-icon"></i>
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Project Inquiry or Internship" required />
+                </div>
+                <span class="error-msg" id="subject-error">Please enter a subject (at least 3 characters)</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-container textarea-container">
+                  <i data-feather="message-square" class="input-icon textarea-icon"></i>
+                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please enter your message (at least 10 characters)</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn" id="contact-submit-btn">
+                <span class="btn-text">Send Message</span>
+                <i data-feather="send" class="btn-icon"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 9. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <a href="#home" class="nav-brand">
+            <span class="brand-bracket">&lt;</span><span class="brand-initials">AD</span><span class="brand-bracket"> /&gt;</span>
+            <span class="brand-name">Adarsh <span class="accent-text">Dutonde</span></span>
+          </a>
+          <p class="footer-tagline">
+            B.Tech Data Science Student | Aspiring Data Analyst | Future AI &amp; ML Engineer
+          </p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-socials">
+          <a href="https://github.com/adarshdutonde18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-feather="github"></i></a>
+          <a href="https://www.linkedin.com/in/adarsh-dutonde-072502387" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+          <a href="mailto:adarshdutonde@gmail.com" aria-label="Email"><i data-feather="mail"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">© 2026 Adarsh Gajanan Dutonde. All Rights Reserved.</p>
+        <p class="credits-text">Designed and Developed with ❤️ by <span class="author-name">Adarsh</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i data-feather="arrow-up"></i>
+  </button>
+
+  <!-- MODAL: CERTIFICATE VIEWER -->
+  <div class="modal-overlay" id="cert-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog cert-modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <i data-feather="award" class="modal-icon"></i>
+          <h3 class="modal-title" id="cert-modal-title">Certificate View</h3>
+        </div>
+        <button class="modal-close-btn" id="close-cert-modal" aria-label="Close modal">
+          <i data-feather="x"></i>
+        </button>
+      </div>
+      <div class="modal-body cert-modal-body">
+        <div class="cert-full-preview">
+          <img src="" alt="Certificate" id="cert-modal-img" class="cert-modal-image" />
+        </div>
+        <div class="cert-modal-meta">
+          <div class="meta-item">
+            <span class="meta-label">Issuer:</span>
+            <span class="meta-val" id="cert-modal-org">-</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Credential ID:</span>
+            <span class="meta-val code-font" id="cert-modal-id">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: PROJECT DETAILS & LIVE DEMO -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog project-modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <i data-feather="layers" class="modal-icon"></i>
+          <h3 class="modal-title" id="project-modal-title">Project Details</h3>
+        </div>
+        <button class="modal-close-btn" id="close-project-modal" aria-label="Close modal">
+          <i data-feather="x"></i>
+        </button>
+      </div>
+      <div class="modal-body project-modal-body">
+        <div class="project-modal-image-box">
+          <img src="" alt="Project Showcase" id="project-modal-img" class="project-modal-image" />
+        </div>
+        <div class="project-modal-info">
+          <h4 id="project-modal-subtitle" class="project-modal-subtitle">Subheading</h4>
+          <p id="project-modal-desc" class="project-modal-desc">Detailed project description goes here.</p>
+          <div class="project-modal-specs">
+            <h5>Core Capabilities &amp; Architecture:</h5>
+            <ul id="project-modal-highlights" class="project-highlights-list"></ul>
+          </div>
+          <div class="project-modal-tags" id="project-modal-tags"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/adarshdutonde18/PortRepo-collab" id="project-modal-repo-link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i data-feather="github"></i>
+          <span>View Source Repository</span>
+        </a>
+        <button class="btn btn-primary" id="project-modal-launch-btn">
+          <i data-feather="external-link"></i>
+          <span>Open Interactive Demo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div class="toast-notification" id="toast" role="status" aria-live="polite">
+    <div class="toast-icon-box">
+      <i data-feather="check-circle" id="toast-icon"></i>
+    </div>
+    <div class="toast-content">
+      <h5 class="toast-title" id="toast-title">Message Sent</h5>
+      <p class="toast-message" id="toast-message">Thank you! Your message has been sent successfully.</p>
+    </div>
+    <button class="toast-close" id="toast-close" aria-label="Dismiss Notification">
+      <i data-feather="x"></i>
+    </button>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
