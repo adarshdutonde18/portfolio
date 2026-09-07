@@ -1,0 +1,20 @@
+{
+  "name": "adarsh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal developer and Data Science portfolio website for Adarsh Gajanan Dutonde",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static build ready'"
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "machine-learning",
+    "ai",
+    "developer"
+  ],
+  "author": "Adarsh Gajanan Dutonde",
+  "license": "MIT"
+}
