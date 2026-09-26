@@ -463,22 +463,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const certModal = document.getElementById('cert-modal');
   const certModalTitle = document.getElementById('cert-modal-title');
   const certModalImg = document.getElementById('cert-modal-img');
+  const certModalPdf = document.getElementById('cert-modal-pdf');
   const certModalOrg = document.getElementById('cert-modal-org');
   const certModalId = document.getElementById('cert-modal-id');
+  const certModalDate = document.getElementById('cert-modal-date');
+  const certModalFileLink = document.getElementById('cert-modal-file-link');
   const closeCertModalBtn = document.getElementById('close-cert-modal');
   const certViewBtns = document.querySelectorAll('.cert-view-btn');
 
-  function openCertModal(src, title, org, id) {
-    certModalTitle.textContent = title;
-    certModalImg.src = src;
-    certModalOrg.textContent = org;
-    certModalId.textContent = id;
-    certModal.classList.add('open');
+  function openCertModal(src, title, org, id, date, fileLink) {
+    const isPdf = typeof fileLink === 'string' && fileLink.toLowerCase().endsWith('.pdf');
+
+    if (certModalTitle) certModalTitle.textContent = title;
+    if (certModalImg) {
+      certModalImg.src = src;
+      certModalImg.style.display = isPdf ? 'none' : 'block';
+    }
+    if (certModalPdf) {
+      certModalPdf.src = isPdf ? fileLink : '';
+      certModalPdf.style.display = isPdf ? 'block' : 'none';
+    }
+    if (certModalOrg) certModalOrg.textContent = org;
+    if (certModalId) certModalId.textContent = id;
+    if (certModalDate) certModalDate.textContent = date || 'Verified';
+    if (certModalFileLink) {
+      certModalFileLink.href = fileLink || src;
+    }
+    if (certModal) certModal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (window.feather) feather.replace();
   }
 
   function closeCertModal() {
-    certModal.classList.remove('open');
+    if (certModal) certModal.classList.remove('open');
     document.body.style.overflow = '';
   }
 
@@ -488,7 +505,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const title = btn.getAttribute('data-cert-title');
       const org = btn.getAttribute('data-cert-org');
       const id = btn.getAttribute('data-cert-id');
-      openCertModal(src, title, org, id);
+      const date = btn.getAttribute('data-cert-date');
+      const fileLink = btn.getAttribute('data-cert-link');
+      openCertModal(src, title, org, id, date, fileLink);
     });
   });
 

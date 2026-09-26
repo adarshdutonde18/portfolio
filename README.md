@@ -2,7 +2,7 @@
 
 ![Portfolio Preview](assets/images/adarsh-avatar.jpg)
 
-Official personal portfolio repository of **Adarsh Gajanan Dutonde**, First Year B.Tech Data Science Student at **DY Patil College of Engineering and Technology, Kolhapur**. Aspiring Data Analyst & Future AI/ML Engineer.
+Official personal portfolio repository of **Adarsh Gajanan Dutonde**, Second Year B.Tech Data Science Student at **DY Patil College of Engineering and Technology, Kolhapur**. Aspiring Data Analyst & Future AI/ML Engineer.
 
 ---
 
@@ -79,6 +79,8 @@ Open your browser and visit: `http://localhost:3000`
 
 * **GitHub**: [@adarshdutonde_18](https://github.com/adarshdutonde18)
 * **LinkedIn**: [Adarsh Gajanan Dutonde](https://www.linkedin.com/in/adarsh-dutonde-072502387)
+* **Instagram**: [@adarsh_dutonde](https://www.instagram.com/adarsh_dutonde/)
+* **Credentials Drive**: [Verified Certificates Folder](https://drive.google.com/drive/folders/1EIas7s89DoRy1SQYe9BjYbD6IyjIly_w?usp=drive_link)
 * **Email**: [adarshdutonde@gmail.com](mailto:adarshdutonde@gmail.com)
 * **College**: DY Patil College of Engineering and Technology, Kolhapur
 
