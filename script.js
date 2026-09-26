@@ -709,20 +709,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
-      const origBtnContent = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Sending...</span>';
 
       try {
         const payload = {
           access_key: '1bbe0ab0-7625-450f-8d3e-f4a28a93705e',
+          botcheck: false,
           name: nameInput.value.trim(),
           email: emailInput.value.trim(),
           subject: subjectInput.value.trim(),
           message: messageInput.value.trim(),
-          from_name: 'Adarsh Portfolio Contact Form',
+          from_name: 'Portfolio Contact Form',
           replyto: emailInput.value.trim(),
-          website: 'Adarsh Portfolio'
+          website: 'https://adarshdutonde.dev'
         };
 
         const response = await fetch('https://api.web3forms.com/submit', {
@@ -752,7 +751,6 @@ document.addEventListener('DOMContentLoaded', () => {
         );
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = origBtnContent;
         if (window.feather) feather.replace();
       }
     });
