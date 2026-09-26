@@ -679,7 +679,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       let isValid = true;
 
@@ -709,23 +709,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
-      // Simulate sending
       const origBtnContent = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span>Sending...</span>';
 
-      setTimeout(() => {
+      try {
+        const payload = {
+          access_key: '1bbe0ab0-7625-450f-8d3e-f4a28a93705e',
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          subject: subjectInput.value.trim(),
+          message: messageInput.value.trim(),
+          from_name: 'Adarsh Portfolio Contact Form',
+          replyto: emailInput.value.trim(),
+          website: 'Adarsh Portfolio'
+        };
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || result.success !== true) {
+          throw new Error(result.message || 'Failed to send message');
+        }
+
+        showToast(
+          'Message Sent!',
+          `Thank you ${nameInput.value.trim()}, your message has been sent successfully.`
+        );
+        contactForm.reset();
+      } catch (error) {
+        showToast(
+          'Message Failed',
+          'Something went wrong while sending your message. Please try again or email me directly.'
+        );
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = origBtnContent;
         if (window.feather) feather.replace();
-
-        showToast(
-          'Message Delivered!',
-          `Thank you ${nameInput.value.trim()}, Adarsh has received your inquiry.`
-        );
-
-        contactForm.reset();
-      }, 900);
+      }
     });
   }
 
